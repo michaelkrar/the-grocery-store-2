@@ -7,6 +7,12 @@ public class grocery{
         this.markupRate = markupRate;
         this.originalPrice = originalPrice;
     }
+    public void SetName(String m){
+        name = m;
+    }
+    public String getName(){
+        return name;
+    }
     public void SetMarkup(double m){
         markupRate = m;
     }
@@ -18,6 +24,9 @@ public class grocery{
     }
     public double getOriginalPrice(){
         return originalPrice;
+    }
+    public double getFinalPrice(){
+        return originalPrice*markupRate;
     }
 
     @Override

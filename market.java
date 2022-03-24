@@ -1,5 +1,6 @@
 import java.lang.Math;
 import java.util.ArrayList;
+import java.util.Arrays;
 public class market{
     public static void main(String args[]){
         freshFood apple = new freshFood("apple", 1.25, 9, 4);
@@ -8,6 +9,11 @@ public class market{
         frozenFood peas = new frozenFood("peas", 1.25, 2, -23.2);
         grocery beans = new grocery("beans", 1.50, 23);
 
+        ArrayList<grocery> clearInv = new ArrayList<>(Arrays.asList());
+        shopper s1 = new shopper("Joe", 25, 19.34, clearInv);
+        System.out.println(s1.getBalance());
+        s1.buy(peas);
+        System.out.println(s1.getBalance());
         System.out.println("Grocery store.");
         ArrayList<grocery> list = new ArrayList<>();
         list.add(apple);

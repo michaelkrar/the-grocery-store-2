@@ -4,7 +4,7 @@ public class freshFood extends grocery{
     public freshFood(String name, double markupRate, double originalPrice, int ripenessDays){
         super(name, markupRate, originalPrice);
         this.ripenessDays = ripenessDays;
-        freshOriginalPrice = (Math.exp(0-ripenessDays)*originalPrice);
+        originalPrice = (Math.exp(0-ripenessDays)*originalPrice);
     }
     public void setDaysRipe(int t){
         ripenessDays = t;
