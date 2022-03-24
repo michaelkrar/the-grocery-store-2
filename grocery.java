@@ -1,7 +1,9 @@
 public class grocery{
+    String name;
     double markupRate;
     double originalPrice;
-    public grocery(markupRate,originalPrice){
+    public grocery(String name, double markupRate, double originalPrice){
+        this.name = name;
         this.markupRate = markupRate;
         this.originalPrice = originalPrice;
     }
@@ -16,5 +18,10 @@ public class grocery{
     }
     public double getOriginalPrice(){
         return originalPrice;
+    }
+
+    @Override
+    public String toString(){
+        return name + " will be $" + markupRate*originalPrice + ".";
     }
 }
