@@ -1,7 +1,7 @@
 public class grocery{
     double markupRate;
     double originalPrice;
-    public groceries(markupRate,originalPrice){
+    public grocery(markupRate,originalPrice){
         this.markupRate = markupRate;
         this.originalPrice = originalPrice;
     }

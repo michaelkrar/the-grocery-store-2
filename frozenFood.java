@@ -1,8 +1,9 @@
 public class frozenFood extends grocery{
     double tempCelsius;
-    double
-    public frozenFood(){
-
+    public frozenFood(double markupRate, double originalPrice, double tempCelsius){
+    super(markupRate, originalPrice);
+    this.tempCelsius = tempCelsius;
+    }
         public void setTemp(double t){
             tempCelsius = t;
         }
@@ -10,4 +11,3 @@ public class frozenFood extends grocery{
             return tempCelsius
         }
     }
-}
