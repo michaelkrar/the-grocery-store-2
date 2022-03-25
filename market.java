@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 public class market{
     public static void main(String args[]){
+        
         freshFood apple = new freshFood("apple", 1.25, 9, 4);
         freshFood lettuce = new freshFood("lettuce", 1.75, 5, 6);
         frozenFood iceCream = new frozenFood("iceCream", 1.25, 3, -10.3);
@@ -11,7 +12,10 @@ public class market{
         grocery beans = new grocery("beans", 1.50, 23);
 
         ArrayList<grocery> clearInv = new ArrayList<>(Arrays.asList());
+        System.out.println("a");
         employee e1 = new employee(100, "Gerald", 22, 1.43, 11.32, 6, 3, .43, true);
+        System.out.println("b");
+
         shopper s1 = new shopper(100, "Joe", 25, 19.34, clearInv, 2, .41, true);
         System.out.println(s1.getBalance());
         s1.buy(peas);
@@ -30,7 +34,8 @@ public class market{
         e1.speak("HEY!");
         
         employee e2 = new employee(100, "Gerald", 22, 1.43, 11.32, 6, 3, .85 ,true);
-
+        employee s2 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true);
+        System.out.println("stuck");
         // HashMap<grocery, Integer> stock = new HashMap<>(lettuce,1,iceCream,2);
 
         // HashMap<grocery, Integer> stock = new HashMap<>(lettuce, iceCream); 

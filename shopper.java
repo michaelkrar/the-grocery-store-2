@@ -17,6 +17,7 @@ public class shopper extends person {
         int dmg = (int)(Math.random()*19+9);
         p.setHp(hp-dmg);
     }
+    
     // public void sell(){
 
     // }

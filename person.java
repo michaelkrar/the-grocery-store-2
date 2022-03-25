@@ -1,7 +1,7 @@
 import java.util.concurrent.TimeUnit;
 import java.util.ArrayList;
 
-public class person {
+public class person implements Runnable {
     String name;
     int age;
     double balance;
@@ -19,11 +19,10 @@ public class person {
         this.lvl = lvl;
         this.xp = xp;
         this.isAlive = isAlive;
-        while(true){
-                    this.personPeriodic();
-        }
+        this.personInit();
+        
     }
-    public String getName(){
+    public String getName_(){
         return name;
     }
     public double getBalance(){
@@ -44,13 +43,21 @@ public class person {
         p.setHp(hp-dmg);
     }
     public void speak(String spk){
-        System.out.println(this.getName() + " says " + "'" + spk + "'");
+        System.out.println(this.getName_() + " says " + "'" + spk + "'");
     }
 
     public boolean checkPulse(){
         return isAlive;
     }
+    public void personInit(){
+        
+       new Thread(this).start();
+   
+        
+    }
     public void personPeriodic(){
+        
+        
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
@@ -62,7 +69,18 @@ public class person {
                 isAlive = false;
             }
             // System.out.println(timeUnit);
-            System.out.println("test" + timeUnit);
+            System.out.println("test1" + timeUnit);
+            this.speak("Hello");
+        
+    }
+        public void run(){
+            while(true){
+                this.personPeriodic();
+                System.out.println("success");
+            }
+            
+            
+            
         }
     
 
