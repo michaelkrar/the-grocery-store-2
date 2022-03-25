@@ -1,24 +1,21 @@
 import java.util.ArrayList;
 
-public class shopper {
-    String name;
-    int age;
-    double balance;
+public class shopper extends person {
     ArrayList<grocery> inventory;
-    public shopper(String name, int age, double balance,ArrayList<grocery> inventory){
-        this.name = name;
-        this.age = age;
-        this.balance = balance;
-    }
-    public double getBalance(){
-        return balance;
-    }
-    public void setBalance(double b){
-        balance = b;
+    public shopper(int hp, String name, int age, double balance,ArrayList<grocery> inventory){
+        super(hp, name, age, balance);
+        this.inventory = inventory;
     }
     public void buy(grocery grocery){
         double r = balance-grocery.getFinalPrice();
         this.setBalance(r);
+        inventory.add(grocery);
+    }
+    @Override
+    public void attack(person p){
+        System.out.println("Shopping cart smash!");
+        int dmg = (int)(Math.random()*19+9);
+        p.setHp(hp-dmg);
     }
     // public void sell(){
 

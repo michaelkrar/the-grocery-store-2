@@ -25,6 +25,7 @@ public class market{
         int s = (int)(Math.random()*4 +1);
 
         System.out.println(list.get(s).toString());
-
+        s1.attack(e1);
+        e1.speak("HEY!");
     }
 }

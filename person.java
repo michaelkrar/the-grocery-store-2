@@ -12,6 +12,9 @@ public class person {
         this.age = age;
         this.balance = balance;
     }
+    public String getName(){
+        return name;
+    }
     public double getBalance(){
         return balance;
     }
@@ -28,6 +31,9 @@ public class person {
         System.out.println("Personal punch!");
         int dmg = (int)(Math.random()*7+4);
         p.setHp(hp-dmg);
+    }
+    public void speak(String spk){
+        System.out.println(this.getName() + " says " + "'" + spk + "'");
     }
     
     // public void sell(){
