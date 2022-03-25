@@ -3,8 +3,8 @@ import java.util.ArrayList;
 public class employee extends person {
     double hourlyPay;
     int position;
-    public employee(String name, int age, double balance, double hourlyPay, int position){
-        super(name, age, balance);
+    public employee(int hp, String name, int age, double balance, double hourlyPay, int position){
+        super(hp, name, age, balance);
         this.hourlyPay = hourlyPay;
         this.position = position;
     }
@@ -21,7 +21,12 @@ public class employee extends person {
     public int getPosition(){
         return position;
     }
-    
+    @Override
+    public void attack(person p){
+        System.out.println("Minimum wage kick!");
+        int dmg = (int)(Math.random()*15+11);
+        p.setHp(hp-dmg);
+    }
     
     // public void sell(){
 

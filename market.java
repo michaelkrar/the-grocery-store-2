@@ -10,7 +10,8 @@ public class market{
         grocery beans = new grocery("beans", 1.50, 23);
 
         ArrayList<grocery> clearInv = new ArrayList<>(Arrays.asList());
-        shopper s1 = new shopper("Joe", 25, 19.34, clearInv);
+        employee e1 = new employee(100, "Gerald", 22, 1.43, 11.32, 6);
+        shopper s1 = new shopper(100, "Joe", 25, 19.34, clearInv);
         System.out.println(s1.getBalance());
         s1.buy(peas);
         System.out.println(s1.getBalance());
