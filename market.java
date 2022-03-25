@@ -1,6 +1,7 @@
 import java.lang.Math;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 public class market{
     public static void main(String args[]){
         freshFood apple = new freshFood("apple", 1.25, 9, 4);
@@ -10,8 +11,8 @@ public class market{
         grocery beans = new grocery("beans", 1.50, 23);
 
         ArrayList<grocery> clearInv = new ArrayList<>(Arrays.asList());
-        employee e1 = new employee(100, "Gerald", 22, 1.43, 11.32, 6);
-        shopper s1 = new shopper(100, "Joe", 25, 19.34, clearInv);
+        employee e1 = new employee(100, "Gerald", 22, 1.43, 11.32, 6, 3, .43, true);
+        shopper s1 = new shopper(100, "Joe", 25, 19.34, clearInv, 2, .41, true);
         System.out.println(s1.getBalance());
         s1.buy(peas);
         System.out.println(s1.getBalance());
@@ -27,5 +28,13 @@ public class market{
         System.out.println(list.get(s).toString());
         s1.attack(e1);
         e1.speak("HEY!");
+        
+        employee e2 = new employee(100, "Gerald", 22, 1.43, 11.32, 6, 3, .85 ,true);
+
+        // HashMap<grocery, Integer> stock = new HashMap<>(lettuce,1,iceCream,2);
+
+        // HashMap<grocery, Integer> stock = new HashMap<>(lettuce, iceCream); 
+        // Store traderjoes = new Store();
+
     }
 }
