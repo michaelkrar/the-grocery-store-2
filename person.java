@@ -1,4 +1,4 @@
-import java.util.concurrent.TimeUnit;
+
 import java.util.ArrayList;
 
 public class person implements Runnable {
@@ -46,14 +46,17 @@ public class person implements Runnable {
         System.out.println(this.getName_() + " says " + "'" + spk + "'");
     }
 
-    public boolean checkPulse(){
-        return isAlive;
+    public void checkPulse(){
+        if(hp<=0){
+            isAlive = false;
+        }
+        else{
+            isAlive=true;
+        }
     }
     public void personInit(){
         
-       new Thread(this).start();
-   
-        
+       new Thread(this).start();        
     }
     public void personPeriodic(){
         
@@ -65,19 +68,17 @@ public class person implements Runnable {
             e.printStackTrace();
         }
         timeUnit++;
-            if(hp<=0){
-                isAlive = false;
-            }
+            checkPulse();
             // System.out.println(timeUnit);
             System.out.println("test1" + timeUnit);
             this.speak("Hello");
         
     }
         public void run(){
-            while(true){
+            do {
                 this.personPeriodic();
                 System.out.println("success");
-            }
+            }while(isAlive);
             
             
             

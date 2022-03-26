@@ -36,6 +36,8 @@ public class market{
         employee e2 = new employee(100, "Gerald", 22, 1.43, 11.32, 6, 3, .85 ,true);
         employee s2 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true);
         System.out.println("stuck");
+
+        TemporalControl t1 = new TemporalControl();
         // HashMap<grocery, Integer> stock = new HashMap<>(lettuce,1,iceCream,2);
 
         // HashMap<grocery, Integer> stock = new HashMap<>(lettuce, iceCream); 

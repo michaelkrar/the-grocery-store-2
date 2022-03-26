@@ -6,13 +6,26 @@ public class TemporalControl implements Runnable {
     int day;
     int year;
     int month;
+    public TemporalControl(){
+        this.timeInit();
+    }
     public void timeInit(){
         rawTimeSec=0;
         new Thread(this).start();
     }
     public void timePeriodic(){
+        try
+            {
+                Thread.sleep(1000);
+            }
+        catch(InterruptedException ex)
+            {
+                Thread.currentThread().interrupt();
+            }
+        rawTimeSec++;
         timeUniter();
-        System.out.println("Time: " + hour + ":" + minute);
+        System.out.println(rawTimeSec);
+        System.out.println("Time: " + hour + ":" + minute + ":" + second);
         System.out.println("Day: " + month + "/" + day + "/" + year);
     }
     public void timeUniter(){
