@@ -49,6 +49,7 @@ public class person implements Runnable {
     public void checkPulse(){
         if(hp<=0){
             isAlive = false;
+            System.out.println("dead");
         }
         else{
             isAlive=true;
@@ -77,7 +78,7 @@ public class person implements Runnable {
         public void run(){
             do {
                 this.personPeriodic();
-                System.out.println("success");
+                // System.out.println("success");
             }while(isAlive);
             
             

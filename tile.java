@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 
 public class tile implements Runnable{
-    ArrayList<person> people;
     boolean isActive;
     public tile(boolean isActive){
         this.isActive = isActive;

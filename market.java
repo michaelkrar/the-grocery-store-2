@@ -35,9 +35,35 @@ public class market{
         
         employee e2 = new employee(100, "Gerald", 22, 1.43, 11.32, 6, 3, .85 ,true);
         employee s2 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true);
+        employee s3 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true);
+        employee s4 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true);
+        employee s5 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true);
+        employee s6 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true);
+        employee s7 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true);
+        employee s8 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true);
+        employee s9 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true);
+        employee s10 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true);
+
         System.out.println("stuck");
 
         TemporalControl t1 = new TemporalControl();
+
+        ArrayList<person> peoples = new ArrayList<person>();
+        peoples.add(s1);
+        peoples.add(s2);
+        peoples.add(e1);
+        peoples.add(e2);
+        peoples.add(s3);
+        peoples.add(s4);
+        peoples.add(s5);
+        peoples.add(s6);
+        peoples.add(s7);
+        peoples.add(s8);
+        peoples.add(s9);
+        peoples.add(s10);
+        Floor fl1 = new Floor(true, peoples);
+
+
         // HashMap<grocery, Integer> stock = new HashMap<>(lettuce,1,iceCream,2);
 
         // HashMap<grocery, Integer> stock = new HashMap<>(lettuce, iceCream); 

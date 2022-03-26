@@ -7,10 +7,11 @@ public class TemporalControl implements Runnable {
     int year;
     int month;
     public TemporalControl(){
+        this.rawTimeSec=0;
         this.timeInit();
     }
     public void timeInit(){
-        rawTimeSec=0;
+        
         new Thread(this).start();
     }
     public void timePeriodic(){
@@ -24,9 +25,9 @@ public class TemporalControl implements Runnable {
             }
         rawTimeSec++;
         timeUniter();
-        System.out.println(rawTimeSec);
-        System.out.println("Time: " + hour + ":" + minute + ":" + second);
-        System.out.println("Day: " + month + "/" + day + "/" + year);
+        // System.out.println(rawTimeSec);
+        // System.out.println("Time: " + hour + ":" + minute + ":" + second);
+        // System.out.println("Day: " + month + "/" + day + "/" + year);
     }
     public void timeUniter(){
         int dsec = rawTimeSec;
@@ -43,7 +44,7 @@ public class TemporalControl implements Runnable {
     public void run(){
         while(true){
             this.timePeriodic();
-            System.out.println("time is running smoothly");
+            // System.out.println("time is running smoothly");
         }
     }
 
