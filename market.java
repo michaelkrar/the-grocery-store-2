@@ -5,18 +5,18 @@ import java.util.HashMap;
 public class market{
     public static void main(String args[]){
         
-        freshFood apple = new freshFood("apple", 1.25, 9, 4);
-        freshFood lettuce = new freshFood("lettuce", 1.75, 5, 6);
-        frozenFood iceCream = new frozenFood("iceCream", 1.25, 3, -10.3);
-        frozenFood peas = new frozenFood("peas", 1.25, 2, -23.2);
-        grocery beans = new grocery("beans", 1.50, 23);
+        freshFood apple = new freshFood("apple", 1.25, 9,3 , 4);
+        freshFood lettuce = new freshFood("lettuce", 1.75,3, 5, 6);
+        frozenFood iceCream = new frozenFood("iceCream", 1.25, 3, 3, -10.3);
+        frozenFood peas = new frozenFood("peas", 1.25, 2,3 , -23.2);
+        grocery beans = new grocery("beans", 1.50,3 , 23);
 
         ArrayList<grocery> clearInv = new ArrayList<>(Arrays.asList());
         System.out.println("a");
-        employee e1 = new employee(100, "Gerald", 22, 1.43, 11.32, 6, 3, .43, true);
+        employee e1 = new employee(100, "Gerald", 22, 1.43, 11.32, 6, 3, .43, true, 8);
         System.out.println("b");
 
-        shopper s1 = new shopper(100, "Joe", 25, 19.34, clearInv, 2, .41, true);
+        shopper s1 = new shopper(100, "Joe", 25, 19.34, clearInv, 2, .41, true, 8);
         System.out.println(s1.getBalance());
         s1.buy(peas);
         System.out.println(s1.getBalance());
@@ -33,16 +33,16 @@ public class market{
         s1.attack(e1);
         e1.speak("HEY!");
         
-        employee e2 = new employee(100, "Gerald", 22, 1.43, 11.32, 6, 3, .85 ,true);
-        employee s2 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true);
-        employee s3 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true);
-        employee s4 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true);
-        employee s5 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true);
-        employee s6 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true);
-        employee s7 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true);
-        employee s8 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true);
-        employee s9 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true);
-        employee s10 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true);
+        employee e2 = new employee(100, "Gerald", 22, 1.43, 11.32, 6, 3, .85 ,true, 8);
+        employee s2 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true, 8);
+        employee s3 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true, 8);
+        employee s4 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true, 8);
+        employee s5 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true, 8);
+        employee s6 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true, 8);
+        employee s7 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true, 8);
+        employee s8 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true, 8);
+        employee s9 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true, 8);
+        employee s10 = new employee(100, "Jimmy", 22, 1.43, 11.32, 6, 3, .85 ,true, 8);
 
         System.out.println("stuck");
 

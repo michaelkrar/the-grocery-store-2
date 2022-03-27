@@ -16,7 +16,7 @@ public class Store implements Runnable {
         this.emps = emps;
         this.stock = stock;
         this.inBusiness = inBusiness;
-        dimensionX = 10;
+        dimensionX = 10; 
         dimensionY = 10;
         this.storeField = new tile[10][10];
         this.storeInit();

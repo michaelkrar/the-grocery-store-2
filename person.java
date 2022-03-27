@@ -10,8 +10,9 @@ public class person implements Runnable {
     int lvl;
     double xp;
     boolean isAlive;
+    double hunger;
     int timeUnit = 0;
-    public person(int hp, String name, int age, double balance, int lvl, double xp, boolean isAlive){
+    public person(int hp, String name, int age, double balance, int lvl, double xp, boolean isAlive, double hunger){
         this.hp = hp;
         this.name = name;
         this.age = age;
@@ -19,6 +20,7 @@ public class person implements Runnable {
         this.lvl = lvl;
         this.xp = xp;
         this.isAlive = isAlive;
+        this.hunger = hunger;
         this.personInit();
         
     }
@@ -59,6 +61,28 @@ public class person implements Runnable {
         
        new Thread(this).start();        
     }
+    public void regulateHunger(){
+        if(this.hunger==0){ // damage if empty hunger bar
+            this.setHp(this.hp-1);
+            System.out.println("HUNGER DAMAGE" + this.getName_());
+        }
+        if(this.hunger>8){ //caps hunger at 8
+            this.hunger = 8;
+        }
+        if(this.hunger<=0){ // min hunger is 0
+            this.hunger = 0;
+        }
+        else{
+            hunger=hunger-0.01;
+        }
+        if(this.hunger>7){
+            if(Util.die(10)==1){
+                this.setHp(this.hp+1);
+            }
+            
+        }
+    }
+    
     public void personPeriodic(){
         
         
@@ -73,6 +97,7 @@ public class person implements Runnable {
             // System.out.println(timeUnit);
             System.out.println("test1" + timeUnit);
             this.speak("Hello");
+            this.regulateHunger();
         
     }
         public void run(){

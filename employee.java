@@ -3,8 +3,8 @@ import java.util.ArrayList;
 public class employee extends person {
     double hourlyPay;
     int position;
-    public employee(int hp, String name, int age, double balance, double hourlyPay, int position, int lvl, double xp, boolean isAlive){
-        super(hp, name, age, balance, lvl, xp, isAlive);
+    public employee(int hp, String name, int age, double balance, double hourlyPay, int position, int lvl, double xp, boolean isAlive, double hunger){
+        super(hp, name, age, balance, lvl, xp, isAlive, hunger);
         this.hourlyPay = hourlyPay;
         this.position = position;
     }
