@@ -81,6 +81,7 @@ public class person implements Runnable {
             }
             
         }
+        
     }
     
     public void personPeriodic(){
@@ -95,8 +96,8 @@ public class person implements Runnable {
         timeUnit++;
             checkPulse();
             // System.out.println(timeUnit);
-            System.out.println("test1" + timeUnit);
-            this.speak("Hello");
+            // System.out.println("test1" + timeUnit);
+            // this.speak("Hello");
             this.regulateHunger();
         
     }

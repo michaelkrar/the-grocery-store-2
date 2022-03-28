@@ -62,6 +62,13 @@ public class market{
         peoples.add(s9);
         peoples.add(s10);
         Floor fl1 = new Floor(true, peoples);
+        person p1 = new person(100, "John", 21, 48.8, 2, 23, true, 5);
+        person p2 = new person(s, "Steve", 23, 43.3, 2, 12, true, 5);
+        ArrayList<person> personz = new ArrayList<person>();
+        personz.add(p1);
+        personz.add(p2);
+        Floor floor1 = new Floor(true, personz);
+        Fight fight1 = new Fight(p1, p2, floor1);
 
 
         // HashMap<grocery, Integer> stock = new HashMap<>(lettuce,1,iceCream,2);

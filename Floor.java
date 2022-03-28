@@ -24,6 +24,6 @@ public class Floor extends tile{
             }
             
         }
-        System.out.println("There are currently " + floorPeople.size() + " people on the tile.");
+        // System.out.println("There are currently " + floorPeople.size() + " people on the tile.");
     }
 }

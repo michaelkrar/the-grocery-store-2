@@ -1,8 +1,8 @@
 public class freshFood extends grocery{
     int ripenessDays;
     double freshOriginalPrice;
-    public freshFood(String name, double markupRate, double originalPrice, int ripenessDays){
-        super(name, markupRate, originalPrice);
+    public freshFood(String name, double markupRate, double originalPrice, double hungerRestore, int ripenessDays){
+        super(name, markupRate, originalPrice, hungerRestore);
         this.ripenessDays = ripenessDays;
         originalPrice = (Math.exp(0-ripenessDays)*originalPrice);
     }

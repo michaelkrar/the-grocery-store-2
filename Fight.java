@@ -32,6 +32,9 @@ public class Fight implements Runnable{
         if(!p1.isAlive||!p2.isAlive){
             fightActive=false;
         }
+        System.out.println("p1:" + p1.getHp());
+        System.out.println("p2:" + p2.getHp());
+
     }
 
     @Override

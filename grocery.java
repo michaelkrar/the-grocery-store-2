@@ -2,10 +2,12 @@ public class grocery{
     String name;
     double markupRate;
     double originalPrice;
-    public grocery(String name, double markupRate, double originalPrice){
+    double hungerRestore;
+    public grocery(String name, double markupRate, double originalPrice, double hungerRestore){
         this.name = name;
         this.markupRate = markupRate;
         this.originalPrice = originalPrice;
+        this.hungerRestore= hungerRestore;
     }
     public void SetName(String m){
         name = m;
@@ -28,6 +30,13 @@ public class grocery{
     public double getFinalPrice(){
         return originalPrice*markupRate;
     }
+    public double getHungerRestore(){
+        return hungerRestore;
+    }
+    public void setHungerRestore(double r){
+        hungerRestore= r;
+    }
+    
 
     @Override
     public String toString(){

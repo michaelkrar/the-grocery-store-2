@@ -27,6 +27,7 @@ public class Store implements Runnable {
     public void storePeriodic(){
         // System.out.println("store");
     }
+    
     @Override
     public void run() {
         do {
