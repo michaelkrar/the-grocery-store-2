@@ -11,7 +11,7 @@ public class grocery{
     }
     public void SetName(String m){
         name = m;
-    }
+    } //change
     public String getName(){
         return name;
     }
